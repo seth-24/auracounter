@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Aura Tracker</h1>
+        <p>Track your daily aura and mood.</p>
+
+        <!-- Rating Section -->
+        <div class="aura-rating">
+            <label for="mood">Rate your Aura:</label>
+            <input type="range" id="mood" name="mood" min="0" max="100" value="50">
+            <span id="mood-value">50</span>
+        </div>
+
+        <div class="aura-display">
+            <div id="aura-color" class="aura-color"></div>
+            <p>Your current aura color and mood rating.</p>
+        </div>
+
+        <button id="save" onclick="saveAura()">Save Aura</button>
+
+        <h2>Saved Auras</h2>
+        <ul id="aura-history"></ul>
+
+        <!-- Voting Section -->
+        <h2>Rate My Aura Today</h2>
+        <p>Based on your mood and feelings, how many auras do you think I had today?</p>
+        <input type="number" id="user-vote" min="1" max="5" placeholder="Rate 1-5">
+        <button onclick="submitVote()">Submit Vote</button>
+        
+        <h3>Average Vote for the Day: <span id="average-vote">0</span>/5</h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

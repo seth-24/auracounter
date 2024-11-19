@@ -1,0 +1,176 @@
+/* Global reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Mood Slider */
+.aura-rating {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#aura-color {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+}
+
+#user-vote {
+    width: 60px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    margin: 10px 0;
+    outline: none;
+    text-align: center;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#save, button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, #save:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Aura History Section */
+#aura-history {
+    margin-top: 20px;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 2px solid #ddd;
+}
+
+#aura-history li {
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Rating Section */
+input[type="number"] {
+    padding: 10px;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    width: 60px;
+    outline: none;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #4CAF50;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: #444;
+}
+
+h2 + p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .aura-rating {
+        padding: 15px;
+    }
+
+    #aura-color {
+        width: 100px;
+        height: 100px;
+    }
+
+    input[type="range"] {
+        width: 80%;
+    }
+}
